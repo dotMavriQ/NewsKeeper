@@ -1,0 +1,13 @@
+#newskeeper-filters {
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.post {
+    margin-bottom: 20px;
+    display: none; /* Initially hide posts */
+}
