@@ -84,7 +84,7 @@ function newskeeper_display_posts()
 
     // Output posts in a gallery format
     echo '<div id="newskeeper-posts" class="gallery">';
-    $query = new WP_Query(array('posts_per_page' => -1));
+    /*$query = new WP_Query(array('posts_per_page' => -1));
     if ($query->have_posts()) {
         while ($query->have_posts()) {
             $query->the_post();
@@ -95,6 +95,7 @@ function newskeeper_display_posts()
         }
     }
     wp_reset_postdata();
+    */
     echo '</div>';
 }
 
@@ -168,7 +169,7 @@ function newskeeper_filter_posts($request)
     if ($query->have_posts()) {
         while ($query->have_posts()) {
             $query->the_post();
-            $output .= '<div class="post">';
+            $output .= '<div class="post" style="display: block">';
             $output .= '<h4>' . get_the_title() . '</h4>';
             $output .= '<p>' . get_the_excerpt() . '</p>';
             $output .= '</div>';

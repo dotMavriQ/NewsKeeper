@@ -18,7 +18,8 @@
                 xhr.setRequestHeader('X-WP-Nonce', wpApiSettings.nonce);
             },
             success: function(data) {
-                // Update the posts container with new posts
+                // Update the posts container with new post
+                console.log(data)
                 document.getElementById('newskeeper-posts').innerHTML = data;
             }
         });
@@ -26,6 +27,8 @@
 
     categoryFilter.addEventListener('change', fetchFilteredPosts);
     tagFilter.addEventListener('change', fetchFilteredPosts);
+
+    fetchFilteredPosts();
 
     console.log("hello")
 })();
